@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -23,7 +23,7 @@ const Header = ({ children, className }: HeaderProps) => {
         />
         <div className='flex flex-col'>
           <h1 className='text-lg font-bold md:text-2xl'>Docify!</h1>
-          <p className='text-sm text-gray-500 md:text-base'>Your main collab tool, what's the tea?</p>
+          <p className='text-sm text-gray-500 md:text-base'>Your main collab tool, what&apos;s the tea?</p>
         </div>
       </Link>
       {children}
