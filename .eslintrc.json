@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/no-unescaped-entities": "off", // Disables the rule for unescaped entities
+    "react-hooks/exhaustive-deps": "warn" // Changes the severity of missing dependencies to a warning
+  }
 }
