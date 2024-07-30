@@ -147,7 +147,7 @@ export const deleteDocument = async (roomId: string) => {
   }
 }
 // Define the base URL for your API
-const API_BASE_URL = 'docifyy.vercel.app'; // Replace with your API base URL
+const API_BASE_URL = 'docify.vercel.app'; // Replace with your API base URL
 
 // Function to fetch document content
 export async function fetchDocument(roomId: string): Promise<string> {
