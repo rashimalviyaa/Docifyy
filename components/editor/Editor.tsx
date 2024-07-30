@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { LexicalComposer } from '@lexical/react/LexicalComposer';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import Theme from './plugins/Theme';
@@ -80,17 +80,17 @@ function EditorComponent({ roomId, currentUserType }: { roomId: string; currentU
   const { threads } = useThreads();
 
   // Function to handle grammar check
-  const handleGrammarCheck = async (content: string) => {
+  const handleGrammarCheck = useCallback(async (content: string) => {
     try {
       const { matches } = await checkGrammar(content);
       setGrammarErrors(matches);
     } catch (error) {
       console.error('Error checking grammar:', error);
     }
-  };
+  }, []);
 
   // Function to handle editor change
-  const handleEditorChange = () => {
+  const handleEditorChange = useCallback(() => {
     if (editor) {
       editor.update(() => {
         const editorState = editor.getEditorState();
@@ -101,14 +101,14 @@ function EditorComponent({ roomId, currentUserType }: { roomId: string; currentU
         });
       });
     }
-  };
+  }, [editor, handleGrammarCheck]);
 
   useEffect(() => {
     if (editor) {
       const unsubscribe = editor.registerUpdateListener(handleEditorChange);
       return () => unsubscribe();
     }
-  }, [editor]);
+  }, [editor, handleEditorChange]);
 
   // Function to handle download
   const handleDownload = () => {
@@ -172,7 +172,7 @@ function EditorComponent({ roomId, currentUserType }: { roomId: string; currentU
         {currentUserType === 'editor' && (
           <>
             <div className="top-24 right-6 flex items-center space-x-4 translate-x-4">
-              <button onClick={handleDownload} className="rounded-lg bg-dark-500   px-3 py-2 text-white">
+              <button onClick={handleDownload} className="rounded-lg bg-dark-500 px-3 py-2 text-white">
                 <span className="hidden sm:inline">Download document</span>
               </button>
               <DeleteModal roomId={roomId} />
@@ -238,3 +238,4 @@ export function Editor({ roomId, currentUserType }: { roomId: string; currentUse
     </LexicalComposer>
   );
 }
+
