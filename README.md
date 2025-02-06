@@ -1,4 +1,4 @@
-# Next.js Project
+# Next.js Project (Deployed on- [Docifyy](https://rashisdocify.netlify.app))
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -6,7 +6,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - **Authentication**: User authentication is handled by Clerk.
 - **Real-time Collaboration**: Liveblocks enables real-time collaboration.
-- **Error Monitoring**: Sentry is integrated for error tracking.
 - **Rich Text Editing**: Lexical provides an enhanced text editing experience.
 - **Notifications**: Users receive alerts for mentions and document access changes.
 
