@@ -5,10 +5,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## 🚀 Features
 
-- **Authentication**: User authentication is handled by Clerk.
-- **Real-time Collaboration**: Liveblocks enables real-time collaboration.
-- **Rich Text Editing**: Lexical provides an enhanced text editing experience.
-- **Notifications**: Users receive alerts for mentions and document access changes.
+## 🚀 Features
+
+Docify is a real-time text editor built with Next.js, enabling seamless collaboration for multiple users on a single document. Here are some of its standout features:
+
+1) Secure Authentication Flow
+2) Full Markdown Editor
+3) Complete Document Management
+4) Real-Time Nested Comments
+5) Floating Comments
+6) Live Cursor
+7) Instant Notifications
+8) Grammar Check
+9) Flexible Sharing Options
+10) Local Downloads
+11) Fully Responsive Design
 
 ---
 
