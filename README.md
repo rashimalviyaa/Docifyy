@@ -133,11 +133,6 @@ To explore Next.js, check out the following resources:
 
 ---
 
-### 🎥 Demo Video
-[![Watch the demo](video.mp4)](video.mp4)
-
----
-
 ### 💡 Contributing
 
 Feel free to contribute! Fork the repository, create a new branch, and submit a PR.
